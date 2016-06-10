@@ -4,11 +4,11 @@ from random import randint
 AI = {'0.5': ['CSC336H1', 'CSC310H1', 'CSC330H1', 'CSC438H1', 'CSC448H1', 'CSC463H1'],
       '2.5': ['CSC401H1', 'CSC485H1', 'CSC320H1', 'CSC420H1', 'CSC321H1', 'CSC411H1', 'CSC412H1', 'CSC384H1', 'CSC486H1']}
 CL = {'ALL': ['CSC318H1', 'CSC401H1', 'CSC485H1', 'PSY100H1'],
-       '1.5': ['CSC309H1', 'CSC321H1', 'CSC330H1', 'CSC411H1', 'CSC428H1', 'CSC486H1']}
+       '1.5': ['CSC321H1', 'CSC330H1', 'CSC411H1', 'CSC428H1', 'CSC486H1']}
 CS = {'ALL': ['CSC324H1', 'CSC443H1', 'CSC469H1', 'CSC488H1'],
       '1.0': ['CSC372H1', 'CSC358H1', 'CSC458H1']}
 GD = {'ALL': ['CSC300H1', 'CSC301H1', 'CSC318H1', 'CSC324H1', 'CSC384H1', 'CSC418H1', 'CSC404H1']}
-IT = {'ALL': ['CSC309H1', 'CSC358H1', 'CSC458H1', 'CSC411H1'],
+IT = {'ALL': ['CSC358H1', 'CSC458H1', 'CSC411H1'],
       '0.5': ['CSC310H1', 'CSC443H1', 'CSC469H1']}
 
 ALL_FOCUSES = {'AI': AI, 'CL': CL, 'CS': CS, 'GD': GD, 'IT': IT}
@@ -16,11 +16,10 @@ ALL_FOCUSES = {'AI': AI, 'CL': CL, 'CS': CS, 'GD': GD, 'IT': IT}
 def getAllCombinations(subjectPost):
     
     allCombinations = []
-    #oneCombination = []
     
     for fce in subjectPost.keys():
         if fce.lower() == 'all':
-            allCombinations += [[subjectPost[fce]]] # Or use .append() ?
+            allCombinations += [[subjectPost[fce]]]
         else:
             # Assume all are float except 'all'
             # Assume all courses are 0.5 FCE
@@ -33,7 +32,6 @@ def getAllCombinations(subjectPost):
 
 def combineAllCombinations(allCombinations):
     
-    #allCombinations = getAllCombinations(CS)
     if len(allCombinations) == 1:
         result = allCombinations[0]
     elif len(allCombinations) == 2:
@@ -42,6 +40,13 @@ def combineAllCombinations(allCombinations):
         # Haven't implemented when len > 2
         pass
     return result
+                
+def getResult(subjectPost):
+
+    result = getAllCombinations(subjectPost)
+    return combineAllCombinations(result)
+
+## ==================================
 
 def convert2into1(combo1, combo2):
     
@@ -50,11 +55,6 @@ def convert2into1(combo1, combo2):
     for i in range(len(combo)):
         result += [combo[i][0] + combo[i][1]]   
     return result
-                
-def getResult(subjectPost):
-
-    result = getAllCombinations(subjectPost)
-    return combineAllCombinations(result)
 
 def getLeastNumCoursesIn2(subjectPosts):
     
@@ -79,20 +79,114 @@ def getLeastNumCoursesIn2(subjectPosts):
                           
             
             currentCombo = list(set(result[i]))
+            currentCombo.sort()
             lenOfCurrentCombo = len(currentCombo)
             if lenOfCurrentCombo not in NumCourse:
                 NumCourse[lenOfCurrentCombo] = []
-            else:
-            #if lenOfCurrentCombo == 8:
-                currentCombo.sort()
-                wantsToAdd = [[[sp1, sp2], currentCombo]]
-                if wantsToAdd[0] not in NumCourse[lenOfCurrentCombo]:
-                    NumCourse[lenOfCurrentCombo] += wantsToAdd
-            #if lenOfCurrentCombo < leastNumCourse:
-                #leastNumCourse = lenOfCurrentCombo
-    return NumCourse    
+            sps = [sp1, sp2]
+            sps.sort()
+            wantsToAdd = [[sps, currentCombo]]
+            if wantsToAdd[0] not in NumCourse[lenOfCurrentCombo]:
+                NumCourse[lenOfCurrentCombo] += wantsToAdd
+    return NumCourse
+
+## ==================================
+
+def convert3into1(combo1, combo2, combo3):
+    
+    combo = list(itertools.product(combo1, combo2, combo3))
+    result = []
+    for i in range(len(combo)):
+        result += [combo[i][0] + combo[i][1] + combo[i][2]]   
+    return result
+
+def getLeastNumCoursesIn3(subjectPosts):
+    
+    oneCombination = []            
+    for subset in itertools.combinations(subjectPosts.values(), 3):
+        oneCombination += [list(subset)]
+        
+    NumCourse = {}
+    
+    for combo in oneCombination:
+        result0 = getResult(combo[0])
+        result1 = getResult(combo[1])
+        result2 = getResult(combo[2])
+    
+        result = convert3into1(result0, result1, result2)
+        
+        for subjectPost in subjectPosts.keys():
+            if subjectPosts[subjectPost] == combo[0]:
+                sp1 = subjectPost
+            if subjectPosts[subjectPost] == combo[1]:
+                sp2 = subjectPost   
+            if subjectPosts[subjectPost] == combo[2]:
+                sp3 = subjectPost                   
+
+        for i in range(len(result)):
+                          
+            currentCombo = list(set(result[i]))
+            currentCombo.sort()
+            lenOfCurrentCombo = len(currentCombo)
+            if lenOfCurrentCombo not in NumCourse:
+                NumCourse[lenOfCurrentCombo] = []
+            sps = [sp1, sp2, sp3]
+            sps.sort()
+            wantsToAdd = [[sps, currentCombo]]
+            if wantsToAdd[0] not in NumCourse[lenOfCurrentCombo]:
+                NumCourse[lenOfCurrentCombo] += wantsToAdd
+    return NumCourse
+
+## ==================================
+
+def convert4into1(combo1, combo2, combo3, combo4):
+    
+    combo = list(itertools.product(combo1, combo2, combo3, combo4))
+    result = []
+    for i in range(len(combo)):
+        result += [combo[i][0] + combo[i][1] + combo[i][2] + combo[i][3]]   
+    return result
+
+def getLeastNumCoursesIn4(subjectPosts):
+    
+    oneCombination = []            
+    for subset in itertools.combinations(subjectPosts.values(), 4):
+        oneCombination += [list(subset)]
+        
+    NumCourse = {}
+    
+    for combo in oneCombination:
+        result0 = getResult(combo[0])
+        result1 = getResult(combo[1])
+        result2 = getResult(combo[2])
+        result3 = getResult(combo[3])
+    
+        result = convert4into1(result0, result1, result2, result3)
+        
+        for subjectPost in subjectPosts.keys():
+            if subjectPosts[subjectPost] == combo[0]:
+                sp1 = subjectPost
+            if subjectPosts[subjectPost] == combo[1]:
+                sp2 = subjectPost   
+            if subjectPosts[subjectPost] == combo[2]:
+                sp3 = subjectPost    
+            if subjectPosts[subjectPost] == combo[3]:
+                sp4 = subjectPost                     
+
+        for i in range(len(result)):
+                          
+            currentCombo = list(set(result[i]))
+            currentCombo.sort()
+            lenOfCurrentCombo = len(currentCombo)
+            if lenOfCurrentCombo not in NumCourse:
+                NumCourse[lenOfCurrentCombo] = []
+            sps = [sp1, sp2, sp3, sp4]
+            sps.sort()
+            wantsToAdd = [[sps, currentCombo]]
+            if wantsToAdd[0] not in NumCourse[lenOfCurrentCombo]:
+                NumCourse[lenOfCurrentCombo] += wantsToAdd
+    return NumCourse
 
 if __name__ == '__main__':
 
-    result = getLeastNumCoursesIn2(ALL_FOCUSES)
-    #print result
+    result = getLeastNumCoursesIn3(ALL_FOCUSES)
