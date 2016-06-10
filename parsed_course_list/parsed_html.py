@@ -2,15 +2,18 @@ import os
 import re
 from bs4 import BeautifulSoup
 
+# The list that contains subject_lists
 list = []
 
+# Relative paths dont work for me for whatever reasons
+# Please change it to your personal path when you want to run on your computer
 for file in os.listdir('/Users/Jun/Desktop/Projects/UTADA/Course-Scheduler/Designators'):
-    fullpath = os.path.join('/Users/Jun/Desktop/Projects/UTADA/Course-Scheduler/Designators', file)
     soup = BeautifulSoup(open('/Users/Jun/Desktop/Projects/UTADA/Course-Scheduler/Designators/' + file), "html.parser")
 
     file = soup.pre.string.replace('20171": ', '20169": ')
     course_list = file.split('20169": ')
 
+# Subject_list contains a dictionary for each course in the subject, meetings are not included
     subject_list = []
 
     for index in range(1, len(course_list)):
@@ -40,5 +43,6 @@ for file in os.listdir('/Users/Jun/Desktop/Projects/UTADA/Course-Scheduler/Desig
             dict["Course"] = (course_list[index - 1].split("},")[-1].strip('\n    "') + '20171')
         else:
             dict["Course"] = (course_list[index - 1].split("},")[-1].strip('\n    "') + '20169')
+        print(dict)
         subject_list.append(dict)
     list.append(subject_list)
