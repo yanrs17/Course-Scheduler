@@ -1,17 +1,20 @@
 import itertools
 from random import randint
 
-AI = {'0.5': ['CSC336H1', 'CSC330H1', 'CSC438H1', 'CSC448H1', 'CSC463H1'],
+AI = {'0.5': ['CSC336H1', 'CSC438H1', 'CSC448H1', 'CSC463H1'],
       '2.5': ['CSC401H1', 'CSC485H1', 'CSC320H1', 'CSC420H1', 'CSC321H1', 'CSC411H1', 'CSC412H1', 'CSC384H1', 'CSC486H1']}
 CL = {'ALL': ['CSC318H1', 'CSC401H1', 'CSC485H1', 'PSY100H1'],
-       '1.5': ['CSC321H1', 'CSC330H1', 'CSC411H1', 'CSC428H1', 'CSC486H1']}
+       '1.5': ['CSC321H1', 'CSC411H1', 'CSC428H1', 'CSC486H1']}
 CS = {'ALL': ['CSC324H1', 'CSC443H1', 'CSC469H1', 'CSC488H1'],
       '1.0': ['CSC372H1', 'CSC358H1', 'CSC458H1']}
 GD = {'ALL': ['CSC300H1', 'CSC301H1', 'CSC318H1', 'CSC324H1', 'CSC384H1', 'CSC418H1', 'CSC404H1']}
 IT = {'ALL': ['CSC358H1', 'CSC458H1', 'CSC411H1'],
       '0.5': ['CSC443H1', 'CSC469H1']}
+CV = {'ALL': ['CSC320H1', 'CSC336H1', 'CSC411H1', 'CSC420H1', 'MAT235H1', 'MAT235H2'],
+      '0.5': ['CSC412H1', 'CSC418H1']}
 
-ALL_FOCUSES = {'AI': AI, 'CL': CL, 'CS': CS, 'GD': GD, 'IT': IT}
+
+ALL_FOCUSES = {'AI': AI, 'CL': CL, 'CS': CS, 'GD': GD, 'IT': IT, 'CV': CV}
 
 def getAllCombinations(subjectPost):
     
@@ -187,6 +190,59 @@ def getLeastNumCoursesIn4(subjectPosts):
                 NumCourse[lenOfCurrentCombo] += wantsToAdd
     return NumCourse
 
+## ===========================================
+def convert5into1(combo1, combo2, combo3, combo4, combo5):
+    
+    combo = list(itertools.product(combo1, combo2, combo3, combo4, combo5))
+    result = []
+    for i in range(len(combo)):
+        result += [combo[i][0] + combo[i][1] + combo[i][2] + combo[i][3] + combo[i][4]]   
+    return result
+
+def getLeastNumCoursesIn5(subjectPosts):
+    
+    oneCombination = []            
+    for subset in itertools.combinations(subjectPosts.values(), 5):
+        oneCombination += [list(subset)]
+        
+    NumCourse = {}
+    
+    for combo in oneCombination:
+        result0 = getResult(combo[0])
+        result1 = getResult(combo[1])
+        result2 = getResult(combo[2])
+        result3 = getResult(combo[3])
+        result4 = getResult(combo[4])
+    
+        result = convert5into1(result0, result1, result2, result3, result4)
+        
+        for subjectPost in subjectPosts.keys():
+            if subjectPosts[subjectPost] == combo[0]:
+                sp1 = subjectPost
+            if subjectPosts[subjectPost] == combo[1]:
+                sp2 = subjectPost   
+            if subjectPosts[subjectPost] == combo[2]:
+                sp3 = subjectPost    
+            if subjectPosts[subjectPost] == combo[3]:
+                sp4 = subjectPost         
+            if subjectPosts[subjectPost] == combo[4]:
+                sp5 = subjectPost                             
+
+        for i in range(len(result)):
+                          
+            currentCombo = list(set(result[i]))
+            currentCombo.sort()
+            lenOfCurrentCombo = len(currentCombo)
+            if lenOfCurrentCombo not in NumCourse:
+                NumCourse[lenOfCurrentCombo] = []
+            sps = [sp1, sp2, sp3, sp4, sp5]
+            sps.sort()
+            wantsToAdd = [[sps, currentCombo]]
+            if wantsToAdd[0] not in NumCourse[lenOfCurrentCombo]:
+                NumCourse[lenOfCurrentCombo] += wantsToAdd
+    return NumCourse
+
 if __name__ == '__main__':
 
-    result = getLeastNumCoursesIn3(ALL_FOCUSES)
+    result = getLeastNumCoursesIn4(ALL_FOCUSES)
+    print(result.keys())
