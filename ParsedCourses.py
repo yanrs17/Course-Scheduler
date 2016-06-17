@@ -7,8 +7,8 @@ list = []
 
 # Relative paths dont work for me for whatever reasons
 # Please change it to your personal path when you want to run on your computer
-for file in os.listdir('/Users/Jun/Desktop/Projects/UTADA/Course-Scheduler/Designators'):
-    soup = BeautifulSoup(open('/Users/Jun/Desktop/Projects/UTADA/Course-Scheduler/Designators/' + file), "html.parser")
+for file in os.listdir('/Users/Ryan Ruoshui Yan/desktop/CourseScheduler/Designators/'):
+    soup = BeautifulSoup(open('/Users/Ryan Ruoshui Yan/desktop/CourseScheduler/Designators/' + file), "html.parser")
 
     file = soup.pre.string.replace('20171": ', '20169": ')
     course_list = file.split('20169": ')

@@ -2,9 +2,9 @@ import itertools
 from random import randint
 
 AI = {'0.5': ['CSC336H1', 'CSC438H1', 'CSC448H1', 'CSC463H1'],
-      '2.5': ['CSC401H1', 'CSC485H1', 'CSC320H1', 'CSC420H1', 'CSC321H1', 'CSC411H1', 'CSC412H1', 'CSC384H1', 'CSC486H1']}
+      '2.5': ['CSC401H1', 'CSC485H1', 'CSC320H1', 'CSC420H1', 'CSC321H1', 'CSC411H1', 'CSC412H1', 'CSC384H1']}
 CL = {'ALL': ['CSC318H1', 'CSC401H1', 'CSC485H1', 'PSY100H1'],
-       '1.5': ['CSC321H1', 'CSC411H1', 'CSC428H1', 'CSC486H1']}
+       '1.5': ['CSC321H1', 'CSC411H1', 'CSC428H1']}
 CS = {'ALL': ['CSC324H1', 'CSC443H1', 'CSC469H1', 'CSC488H1'],
       '1.0': ['CSC372H1', 'CSC358H1', 'CSC458H1']}
 GD = {'ALL': ['CSC300H1', 'CSC301H1', 'CSC318H1', 'CSC324H1', 'CSC384H1', 'CSC418H1', 'CSC404H1']}
@@ -14,7 +14,7 @@ CV = {'ALL': ['CSC320H1', 'CSC336H1', 'CSC411H1', 'CSC420H1', 'MAT235H1', 'MAT23
       '0.5': ['CSC412H1', 'CSC418H1']}
 
 
-ALL_FOCUSES = {'AI': AI, 'CL': CL, 'CS': CS, 'GD': GD, 'IT': IT, 'CV': CV}
+ALL_FOCUSES = {'AI': AI, 'CL': CL, 'CS': CS, 'GD': GD, 'IT': IT}
 
 def getAllCombinations(subjectPost):
     
