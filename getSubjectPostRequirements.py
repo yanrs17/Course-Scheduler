@@ -40,8 +40,8 @@ driver.get("https://degreeexplorer.utoronto.ca/degreeExplorer/login.xhtml")
 # Assume the user below has 0 subject post    #
 # selected. 								  #
 # ------------------------------------------- #
-ZYuser = "yezhimo"
-ZYpwd = "moer6637"
+ZYuser = ""
+ZYpwd = ""
 
 userFieldID = "loginForm:utorid"
 passFieldID = "loginForm:password"
