@@ -244,5 +244,5 @@ def getLeastNumCoursesIn5(subjectPosts):
 
 if __name__ == '__main__':
 
-    result = getLeastNumCoursesIn4(ALL_FOCUSES)
+    result = getLeastNumCoursesIn5(ALL_FOCUSES)
     print(result.keys())
