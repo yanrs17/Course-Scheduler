@@ -1,0 +1,355 @@
+2.7.10 (v2.7.10:15c95b7d81dc, May 23 2015, 09:33:12) 
+[GCC 4.2.1 (Apple Inc. build 5666) (dot 3)]
+Python Type "help", "copyright", "credits" or "license" for more information.
+[evaluate getSubjectPostRequirements.py]
+Aboriginal Studies Major
+Aboriginal Studies Minor
+Aboriginal Studies Specialist
+Accounting: Financial Reporting & Control (B.Com) Specialist
+Accounting: Public Accounting (B.Com) Specialist
+Actuarial Science Major
+Actuarial Science Specialist
+African Studies Major
+African Studies Minor
+African Studies Specialist
+American Studies Major
+American Studies Minor
+Animal Physiology Major
+Anthropology Major
+Anthropology Minor
+Anthropology (Evolutionary) Major
+Anthropology (Society, Culture & Language) Major
+Anthropology (Society, Culture & Language) Specialist
+Applied Mathematics Specialist
+Applied Statistics Specialist
+Applied Statistics Specialist: Focus in Astronomy and Astrophysics
+Applied Statistics Specialist: Focus in Cognitive Psychology
+Applied Statistics Specialist: Focus in Genes, Genetics & Biotechnology
+Applied Statistics Specialist: Focus in Global Health
+Applied Statistics Specialist: Focus in Health and Disease
+Applied Statistics Specialist: Focus in Health Studies
+Applied Statistics Specialist: Focus in Human Biology
+Applied Statistics Specialist: Focus in Psycholinguistics
+Applied Statistics Specialist: Focus in Social Psychology
+Applied Statistics Specialist: Focus in Sociolinguistics
+Applied Statistics Specialist: Focus in Sociology
+Archaeology Major
+Archaeology Minor
+Archaeology Specialist
+Asian Canadian Studies Minor
+Asian Geographies (Joint NUS) Minor
+Asian Literatures and Cultures (Joint NUS) Minor
+Astronomy & Physics Specialist
+Astronomy and Astrophysics Major
+Astronomy and Astrophysics Minor
+Biochemistry Major (cannot  be combined with Specialist in Immunology OR Specialist in Molecular Genetics  & Microbiology OR Specialist in Biological Physics: Biochemistry Stream)
+Biochemistry  Specialist (cannot be combined with Specialist in Biological Physics: Biochemistry Stream)
+Biodiversity & Conservation Biology Major
+Bioethics Major
+Bioethics Minor
+Bioethics Specialist
+Bioinformatics & Computational Biology Specialist
+Biological Chemistry Specialist
+Biological Physics Specialist: Advanced Physics
+Biological Physics Specialist: Biochemistry (cannot be combined with Specialist in Biochemistry OR Major in Biochemistry)
+Biological Physics Specialist: Immunology
+Biological Physics Specialist: Physiology
+Biology Major
+Biology Minor
+Biology Specialist
+Biology (Joint NUS) Minor
+Biomedical Toxicology Major (cannot  be combined with Specialist in Pharmacology OR Specialist in Biomedical  Toxicology OR Major in Pharmacology)
+Biomedical Toxicology Specialist
+Book & Media Studies Major
+Book & Media Studies Minor
+Buddhism, Psychology & Mental Health Minor
+Buddhist Studies Major
+Buddhist Studies Specialist
+Business German Minor
+Canadian Studies Major
+Canadian Studies Minor
+Canadian Studies Specialist
+Caribbean Studies Major
+Caribbean Studies Minor
+Caribbean Studies Specialist
+Cell & Molecular  Biology Major
+Cell & Molecular  Biology Specialist
+Celtic Studies Major
+Celtic Studies Minor
+Celtic Studies Specialist
+Chemical Physics Specialist
+Chemistry Major
+Chemistry Minor
+Chemistry Specialist
+Christianity & Culture Major
+Christianity & Culture Minor
+Christianity & Culture: Christianity & Education Minor
+Cinema Studies Major
+Cinema Studies Minor
+Cinema Studies Specialist
+Classical Civilization Major
+Classical Civilization Minor
+Classics Major
+Cognitive Science (Arts) Major
+Cognitive Science (Science) Major
+Computer Science Major
+Computer Science Minor
+Computer Science Specialist
+Computer Science Specialist: Focus in Artificial Intelligence
+Computer Science Specialist: Focus in Computational Linguistics and Natural Language Processing
+Computer Science Specialist: Focus in Computer Systems
+Computer Science Specialist: Focus in Computer Vision
+Computer Science Specialist: Focus in Game Design
+Computer Science Specialist: Focus in Human-Computer Interaction
+Computer Science Specialist: Focus in Scientific Computing
+Computer Science Specialist: Focus in Theory Computation
+Computer Science Specialist: Focus in Web & Internet Technology
+Contemporary Asian Studies Major
+Contemporary Asian Studies Minor
+Creative Expression & Society Minor
+Criminology & Sociolegal Studies Major
+Criminology & Sociolegal Studies Specialist
+Czech & Slovak Studies Major
+Czech & Slovak Studies Minor
+Developmental Biology Specialist
+Diaspora & Transnational Studies Major
+Diaspora & Transnational Studies Minor
+Drama Major
+Drama Minor
+Drama Specialist
+Earth and Environmental Systems Major
+East Asian Studies Major
+East Asian Studies Minor
+East Asian Studies Specialist
+Ecology & Evolutionary Biology Major
+Ecology & Evolutionary Biology Specialist
+Economics Major
+Economics Minor
+Economics Specialist
+Economics & Mathematics Specialist
+Education and Society Minor* See Note at bottom of table
+Employment Relations Major
+Employment Relations Specialist
+English Major
+English Minor
+English Specialist
+Environment & Behaviour Minor
+Environment & Energy Minor
+Environment & Health Major
+Environment & Health Specialist
+Environment & Toxicology Specialist
+Environmental Anthropology Minor
+Environmental Biology Major
+Environmental Biology Minor
+Environmental Chemistry Minor
+Environmental Chemistry Specialist
+Environmental Economics Minor
+Environmental Ethics Major
+Environmental Ethics Minor
+Environmental Geography Major
+Environmental Geography Minor
+Environmental Geography Specialist
+Environmental Geosciences Specialist
+Environmental Science Major
+Environmental Science Minor
+Environmental Studies Major
+Environmental Studies Minor
+Equity Studies Major
+Equity Studies Minor
+Estonian Studies Minor
+Ethics, Society & Law Major
+European Studies Major
+European Union Studies Minor
+Finance & Economics (B. Com) Specialist
+Financial Economics Specialist
+Finnish Studies Major
+Finnish Studies Minor
+Forest Biomaterials Major
+Forest Biomaterials Minor
+Forest Conservation Major
+Forest Conservation Minor
+Forest Conservation Specialist
+Forest Conservation Science Major
+Forest Conservation Science Minor
+Forest Conservation Science Specialist
+French As a Second Language Minor
+French Language & Linguistics Major
+French Language & Linguistics Specialist
+French Language & Literature Major
+French Language & Literature Specialist
+French Language Learning Major
+French Studies Minor
+Genome Biology Major
+Geographic Information Systems
+Geology Specialist
+Geophysics Specialist
+Geoscience Major
+Geoscience Minor
+German Studies Major
+German Studies
+German Studies Specialist
+German Studies in English
+Greek Major
+Greek Minor
+Health Studies (B.A.) Major
+Health Studies (B.A.) Specialist
+History Major
+History Minor
+History Specialist
+History & Philosophy of Science & Technology Major
+History & Philosophy of Science & Technology
+History of Art Major
+History of Art Minor
+History of Art Specialist
+Human Biology Major (cannot be combined with another Human Biology Major)
+Human Biology: Fundamental Genetics and its applications  Major (cannot be combined with another Human Biology Major)
+Human Biology: Fundamental Genetics and its applications Specialist
+Human Biology: Global Health  Major (cannot be combined with another Human Biology Major)
+Human Biology: Global Health Specialist
+Human Biology: Health & Disease Major (cannot be combined with another Human Biology Major)
+Human Biology: Health & Disease Specialist
+Human Biology: Neuroscience Major (cannot be combined with another Human Biology Major)
+Human Biology: Neuroscience Specialist
+Human Geography Major
+Human Geography Minor
+Human Geography Specialist
+Hungarian Studies Major
+Hungarian Studies Minor
+Immunology  Major (cannot  be combined with Specialist in Biochemistry or Specialist in Molecular Genetics  & Microbiology)
+Immunology Minor
+Immunology Specialist
+International Relations Major
+International Relations Specialist
+Islamic Studies Major
+Italian Major
+Italian Minor
+Italian Specialist
+Italian Culture & Communication Studies
+Jewish Studies Major
+Jewish Studies
+Jewish Studies Specialist
+Latin Major
+Latin Minor
+Latin American Studies Major
+Latin American Studies
+Linguistics Major
+Linguistics Minor
+Linguistics Specialist
+Literature & Critical Theory
+Literature & Critical Theory (Comparative Literature) Major
+Literature & Critical Theory (Comparative Literature) Specialist
+Literature & Critical Theory (Cultural Theory Stream) Major
+Literature & Critical Theory (Cultural Theory Stream) Specialist
+Management (B. Com) Specialist
+Material Culture Minor
+Materials Science Specialist
+Mathematical Applications in Economics & Finance Specialist
+Mathematics Major
+Mathematics Minor
+Mathematics Specialist
+Mathematics & Its Applications (Physical Science) Specialist
+Mathematics & Its Applications (Teaching) Specialist
+Mathematics & Its Applications Probability/Statistics) Specialist
+Mathematics & Philosophy Specialist
+Mathematics & Physics Specialist
+Mediaeval Studies Major
+Mediaeval Studies Minor
+Mediaeval Studies Specialist
+Molecular Genetics & Microbiology Major (cannot be combined with Specialist in Biochemistry or       Specialist in Immunology)
+Molecular Genetics & Microbiology Specialist
+Music Major
+Music Specialist
+Music History & Culture Minor
+Music with Ensemble Option Major
+Music with Ensemble Option Specialist
+Nanoscience (NUS) Minor
+Near and Middle Eastern Civilizations Minor
+Near and Middle Eastern Civilizations (Ancient) Major
+Near and Middle Eastern Civilizations (Ancient) Specialist
+Near and Middle Eastern Civilizations (General) Major
+Near and Middle Eastern Civilizations (General) Specialist
+Near and Middle Eastern Civilizations (Medieval) Major
+Near and Middle Eastern Civilizations (Medieval) Specialist
+Near and Middle Eastern Civilizations (Modern) Major
+Near and Middle Eastern Civilizations (Modern) Specialist
+Nutritional Science Major
+Pathobiology Specialist
+Peace, Conflict & Justice Major
+Peace, Conflict & Justice Specialist
+Pharmaceutical Chemistry Specialist
+Pharmacology Major (cannot be combined with Specialist in Pharmacology or       Specialist in Biomedical Toxicology or Major in Biomedical Toxicology)
+Pharmacology Specialist
+Pharmacology & Biomedical Toxicology Specialist
+Pharmacology & Biomedical Toxicology (General) Specialist
+Pharmacology & Biomedical Toxicology (General) Major
+Philosophy Major
+Philosophy Minor
+Philosophy Specialist
+Physical & Environmental Geography Major
+Physical & Environmental Geography
+Physical & Environmental Geography Specialist
+Physics Major
+Physics Minor
+Physics Specialist
+Physics & Philosophy Specialist
+Physiology Major
+Physiology Minor
+Physiology Specialist
+Planetary Science Specialist
+Polish Language & Literature Major
+Polish Language & Literature
+Polish Studies Major
+Polish Studies Minor
+Political Science Major
+Political Science Minor
+Political Science Specialist
+Portuguese Major
+Portuguese Minor
+Portuguese Specialist
+Psychology Major
+Psychology Minor
+Psychology Specialist
+Psychology (Research Specialist) Specialist
+Public Policy Major
+Religion Major
+Religion Minor
+Religion Specialist
+Religion: Christian Origins Specialist
+Renaissance Studies Major
+Renaissance Studies
+Renaissance Studies Specialist
+Russian Language Minor
+Russian Language & Literature Major
+Russian Language & Literature Minor
+Russian Language & Literature Specialist
+Russian Literature in Translation
+Science & Society Minor
+Semiotics & Communication Theory
+Sexual Diversity Studies Major
+Sexual Diversity Studies Minor
+Sexual Diversity Studies Specialist
+Sociology Major
+Sociology Minor
+Sociology Specialist
+South Asian Studies Minor
+South Slavic Studies Major
+South Slavic Studies Minor
+Spanish Major
+Spanish Minor
+Spanish Specialist
+Statistics Major
+Statistics Minor
+Statistics Specialist
+Synthetic & Catalytic Chemistry Specialist
+Ukrainian Language & Literature Major
+Ukrainian Language & Literature Minor
+Ukrainian Language & Literature Specialist
+Urban Studies Major
+Urban Studies Minor
+Urban Studies Specialist
+Visual Studies Minor
+Women and Gender Studies Major
+Women and Gender Studies Minor
+Women and Gender Studies Specialist
+Writing & Rhetoric Minor
+Yiddish, Al & Malke Green Program in
