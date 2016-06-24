@@ -38,13 +38,32 @@ window.onload = function() {
 }
 
 function parser(reqs) {
-    // var req = reqs.replace(/\s/g, '');
+
+    function formatAtLeastFrom(req_split) {
+        var single_req = [];
+        console.log(req_split);
+        single_req.push(req_split[0].substring(0, req_split[0].length - 1));
+        single_req.push();
+
+
+
+        console.log(single_req);
+
+
+    }
+
     var req = reqs.split("(Req");
     var req_array = [];
-    // console.log(req);
+
     for (var i = 0; i < req.length; i ++) {
         if (req[i] != ""){
-            req_array.push(req);
+            req_split = req[i].split(" ");
+
+            /* At least ... credit(s) from ... */
+            /* e.g. (Req1) At least 0.5 Credits from CSC148H1 or CSC150H1 */
+            if (req_split.splice(1, 2).join(" ") == "At least" && req_split.join("").indexOf("Req") == -1) {
+                req_split.push(formatAtLeastFrom(req_split));
+            }
         }
     }
 }
