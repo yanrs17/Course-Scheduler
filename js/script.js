@@ -34,22 +34,16 @@ var ASSPE1689 = "(Req1) At least 0.5 Credits from CSC148H1 or CSC150H1(Req2) At 
 window.onload = function() {
     // console.log("CSC148H1".getFCE());
     // console.log(ASSPE1689);
-    parser(ASSPE1689);
+    var singleSubjectPost = ASSPE1689
+    console.log(calculate(parser(singleSubjectPost)));
 }
 
 function parser(reqs) {
 
-    function formatAtLeastFrom(req_split) {
-        var single_req = [];
-        console.log(req_split);
-        single_req.push(req_split[0].substring(0, req_split[0].length - 1));
-        single_req.push();
-
-
-
-        console.log(single_req);
-
-
+    function isAtLeastFrom(req_split) {
+        /* At least ... credit(s) from ... */
+        /* e.g. (Req1) At least 0.5 Credits from CSC148H1 or CSC150H1 */
+        return req_split.splice(1, 2).join(" ") == "At least" && req_split.join("").indexOf("Req") == -1;
     }
 
     var req = reqs.split("(Req");
@@ -58,12 +52,14 @@ function parser(reqs) {
     for (var i = 0; i < req.length; i ++) {
         if (req[i] != ""){
             req_split = req[i].split(" ");
-
-            /* At least ... credit(s) from ... */
-            /* e.g. (Req1) At least 0.5 Credits from CSC148H1 or CSC150H1 */
-            if (req_split.splice(1, 2).join(" ") == "At least" && req_split.join("").indexOf("Req") == -1) {
-                req_split.push(formatAtLeastFrom(req_split));
-            }
+            req_array.push(req_split);
         }
+    }
+    return req_array;
+}
+
+function calculate(reqs) {
+    for (var i = 0; i < reqs.length; i ++) {
+        console.log(reqs[i]);
     }
 }
